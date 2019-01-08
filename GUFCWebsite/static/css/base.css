@@ -18,7 +18,7 @@
     transition: ease-in-out color .15s;
   }
   .site-header a:hover {
-    color: #fff;
+    color: #ffd73a;
     text-decoration: none;
   }
   
@@ -54,7 +54,7 @@
     right: auto;
     bottom: 0;
     left: 5%;
-    background-color: #e5e5e5;
+    background-color: black;
   }
   
   
@@ -76,5 +76,11 @@
   .overflow-hidden { overflow: hidden; }
 
   body{
+    color: #ffd73a;
+    background-color : black;
+  }
+
+  .jumbotron{
+    color: #ffd73a;
     background-color : black;
   }
