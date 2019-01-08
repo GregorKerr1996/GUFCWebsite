@@ -1,15 +1,18 @@
 <!DOCTYPE html>
+
+{% load staticfiles %}
+
 <html lang="en">
 <head>
-  <title>Bootstrap Theme Company</title>
+  <title>GUFC</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="../images/club_logo.jpg">
+  <link rel="icon" href="{% static 'images/club_logo.jpg' %}">
   
   
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -22,7 +25,7 @@
 
       </div>
       <div class = "col-4">
-          <img src ="../images/club_logo.jpg"/>
+          <img src ="{% static 'images/club_logo.jpg' %}" alt = "Club logo"/>
         </div>
 
         <div class = "col-4">
@@ -33,8 +36,8 @@
 
     <nav class="site-header sticky-top py-1">
         <div class="container d-flex flex-column flex-md-row justify-content-between">
-          <a class="py-2 d-none d-md-inline-block" href="../html/index.html">Home</a>
-          <a class="py-2 d-none d-md-inline-block" href="../html/club.html">The Club</a>
+          <a class="py-2 d-none d-md-inline-block" href="/">Home</a>
+          <a class="py-2 d-none d-md-inline-block" href="/website/club">The Club</a>
           <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="https://example.com" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Teams</a>
               <div class="dropdown-menu" aria-labelledby="dropdown03">
@@ -49,8 +52,8 @@
       </nav>
 
   <div class="jumbotron">
-    <h1>Company</h1>
-    <p>We specialise in ballin</p>
+    <h1>Glasgow University Football Club</h1>
+    <strong>{{ boldmessage }}
   </div>
 
 </body>
