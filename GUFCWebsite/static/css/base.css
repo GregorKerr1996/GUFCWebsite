@@ -1,9 +1,33 @@
-
+.footer {
+  background: #061D25;
+  padding: 10px 0;
+}
+.footer a {
+  color: #70726F;
+  font-size: 20px;
+  padding: 10px;
+  border-right: 1px solid #70726F;
+  transition: all .5s ease;
+}
+.footer a:first-child {
+  border-left: 1px solid #70726F;
+}
+.footer a:hover {
+  color: #ffd73a;
+}
 
 .container {
     max-width: 960px;
-  }
-  
+}
+
+.navbar-default {
+  background-color: black;
+  color: #ffd73a;
+
+ }
+
+
+
   /*
    * Custom translucent site header
    */
