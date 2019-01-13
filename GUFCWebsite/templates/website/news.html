@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>GUFC</title>
+</head>
+
+<body>
+    <div>
+    {% if news_cat %}
+        <h1>{{ news_cat.name }}</h1>
+        {% if reports %}
+            <ul>
+            {% for report in reports %}
+                <h4>{{ report.title }}</h4>
+                <li>{{ report.text }}</li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <strong>No reports currently in news.</strong>
+        {% endif %}
+    {% else %}
+        The specified news category does not exist!
+    {% endif %}
+    </div>
+</body>
+</html>

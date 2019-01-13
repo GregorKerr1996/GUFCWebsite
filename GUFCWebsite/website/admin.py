@@ -1,16 +1,15 @@
 from django.contrib import admin
-from website.models import MatchReport, Report, News
+from website.models import Report, News
 
 # Register your models here.
-class MatchReportAdmin(admin.ModelAdmin):
+class NewsAdmin(admin.ModelAdmin):
 
     prepopulated_fields = {"slug":("name",)}
     list_display = ("name","views")
 
 class ReportAdmin(admin.ModelAdmin):
 
-	list_display = ("title","matchReport","text","views")
+	list_display = ("title","news_cat","text","views")
 
-admin.site.register(MatchReport, MatchReportAdmin)
+admin.site.register(News, NewsAdmin)
 admin.site.register(Report, ReportAdmin)
-admin.site.register(News)

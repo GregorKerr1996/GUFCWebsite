@@ -47,7 +47,7 @@
                 <a class="dropdown-item" href="#">21s</a>
               </div>
             </li>
-          <a class="py-2 d-none d-md-inline-block" href="#">Match Reports</a>         
+          <a class="py-2 d-none d-md-inline-block" href="#">News</a>         
         </div>
       </nav>
 
@@ -57,10 +57,12 @@
   </div>
 
   <div>
-    {% if matchReports %}
+    {% if news_cats %}
     <ul>
-      {% for matchReport in matchReports %}
-      <li>{{ matchReport.name }}</li>
+      {% for cat in news_cats %}
+      <li>
+          <a href"/website/news/{{ cat.slug }}">{{ cat.name }}</a>
+      </li>
       {% endfor %}
     </ul>
     {% else %}
