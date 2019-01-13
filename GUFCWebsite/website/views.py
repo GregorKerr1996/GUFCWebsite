@@ -42,3 +42,33 @@ def show_news(request, news_name_slug):
         context_dict['reports'] = None
     # Go render the response and return it to the client.
     return render(request, 'website/news.html', context_dict)
+
+def teamProfiles(request):
+    context_dict = {}
+
+    return render(request, 'website/teamProfiles.html', context=context_dict)
+
+def firstTeam(request):
+    context_dict = {}
+
+    return render(request, 'website/firstTeam.html', context=context_dict)
+
+def secondTeam(request):
+    context_dict = {}
+
+    return render(request, 'website/secondTeam.html', context=context_dict)
+
+def thirdTeam(request):
+    context_dict = {}
+
+    return render(request, 'website/thirdTeam.html', context=context_dict)
+
+def underTwentyOnes(request):
+    context_dict = {}
+
+    return render(request, 'website/underTwentyOnes.html', context=context_dict)
+
+def matchReports(request):
+    context_dict = {}
+
+    return render(request, 'website/matchReports.html', context=context_dict)

@@ -1,12 +1,82 @@
 <!DOCTYPE html>
 
 {% extends 'website/base.html' %}
-
+{% load staticfiles %}
 {% block title_block %}
 
 {% endblock %}
 
 {% block body_block %}
-    <h1>Lads</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-2">
+            <div class="card">
+                <img class="card-img-top" src="{% static 'images/head_coach.jpg' %}" alt="Card image" height="150"
+                     width="150">
+                <div class="card-body">
+                    <h4 class="card-title">Phil </h4>
+                    <h4 class="card-title">Storrier</h4>
+                    <p class="card-text">2018/2019</p>
+                    <a href="/website/firstTeam" class="btn btn-primary">First Team</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-2">
+            <div class="card">
+                <img class="card-img-top" src="{% static 'images/first_coach.jpg' %}" alt="Card image" height="150"
+                     width="150">
+                <div class="card-body">
+                    <h4 class="card-title">Gary </h4>
+                    <h4 class="card-title">Murray</h4>
+                    <p class="card-text">2018/2019</p>
+                    <a href="/website/firstTeam" class="btn btn-primary">First Team</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-2">
+            <div class="card">
+                <img class="card-img-top" src="{% static 'images/placeholder.jpg' %}" alt="Card image" height="150"
+                     width="150">
+                <div class="card-body">
+                    <h4 class="card-title">Jonathan </h4>
+                    <h4 class="card-title">Quinn</h4>
+                    <p class="card-text">2018/2019</p>
+                    <a href="/website/secondTeam" class="btn btn-primary">Second Team</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-2">
+            <div class="card">
+                <img class="card-img-top" src="{% static 'images/three_coach.jpg' %}" alt="Card image" height="150"
+                     width="150">
+                <div class="card-body">
+                    <h4 class="card-title">Grant </h4>
+                    <h4 class="card-title">Sutherland</h4>
+
+                    <p class="card-text">2018/2019</p>
+                    <a href="/website/thirdTeam" class="btn btn-primary">Third Team</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-2">
+            <div class="card">
+                <img class="card-img-top" src="{% static 'images/twentyone_coach.jpg' %}" alt="Card image" height="150"
+                     width="150">
+                <div class="card-body">
+                    <h4 class="card-title">Ian</h4>
+                    <h4 class="card-title">Elliot</h4>
+                    <p class="card-text">2018/2019</p>
+                    <a href="/website/underTwentyOnes" class="btn btn-primary">U21's</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+</div>
+
 
 {% endblock %}
