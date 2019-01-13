@@ -5,7 +5,8 @@ from website.models import News, Report
 def index(request):
 
     news_cat_list = News.objects.order_by("-views")[:5]
-    context_dict = {'boldmessage': "Ballin never stops", "news_cats": news_cat_list}
+    reports = Report.objects.order_by("-views")[:5]
+    context_dict = {'boldmessage': "Ballin never stops", "news_cats": news_cat_list, "news_reports": reports}
 
     return render(request, 'website/index.html', context_dict)
 

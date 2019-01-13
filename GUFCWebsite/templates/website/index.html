@@ -61,7 +61,7 @@
     <ul>
       {% for cat in news_cats %}
       <li>
-          <a href"/website/news/{{ cat.slug }}">{{ cat.name }}</a>
+          {{ cat.name }}
       </li>
       {% endfor %}
     </ul>
@@ -69,6 +69,25 @@
     <h5>No match Reports available</h5>
     {% endif %}
   </div>
+
+  <div>
+    <h3>
+      Club News and Match Reports
+    </h3>
+    {% if news_reports %}
+      <ul>
+        {% for report in news_reports %}
+        <li>
+          <h5>{{ report.title}}</h5>
+          <p>{{ report.text }}</p>
+        </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+        <h5>No news available</h5>
+      {% endif %}
+  </div>
+
 
 </body>
 </html>
