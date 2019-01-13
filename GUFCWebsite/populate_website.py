@@ -72,8 +72,9 @@ def add_report(team, title, text, views=0):
     r.save()
     return r
 
-def add_match_report(name):
+def add_match_report(name, views=0):
     mr = MatchReport.objects.get_or_create(name=name)[0]
+    mr.views = views
     mr.save()
     return mr
 

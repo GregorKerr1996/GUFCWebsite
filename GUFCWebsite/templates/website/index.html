@@ -56,5 +56,17 @@
     <strong>{{ boldmessage }}
   </div>
 
+  <div>
+    {% if matchReports %}
+    <ul>
+      {% for matchReport in matchReports %}
+      <li>{{ matchReport.name }}</li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <h5>No match Reports available</h5>
+    {% endif %}
+  </div>
+
 </body>
 </html>
