@@ -11,7 +11,7 @@ def populate():
 # Then we will create a dictionary of dictionaries for our categories.
 # This might seem a little bit confusing, but it allows us to iterate
 # through each data structure, and add the data to our models.
-    reports_list = [
+    match_reports = [
         {"title": "Good Win for 1s",
         "text":"Great performance for the lads with some cracking goals from C.Morgan, masterclass from the big man"},
         {"title":"1s in Unlucky Draw",
@@ -33,7 +33,7 @@ def populate():
         {"title":"Transfer News",
         "text":"Don't believe what you read in the papers, C. Morgan has reassured the club of his desire to stay amidst rumours linking the centre-half to Celtic"} ]
 
-    news_cats = {"match_reports": {"reports": reports_list},
+    news_cats = {"match_reports": {"reports": match_reports},
         "club_news": {"reports": club_news},}
 
 # If you want to add more catergories or pages,

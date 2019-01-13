@@ -1,27 +1,45 @@
 <!DOCTYPE html>
 
-<html>
-<head>
-    <title>GUFC</title>
-</head>
+{% extends 'website/base.html' %}
+{% load staticfiles %}
+{% block title_block %}
 
-<body>
+{% endblock %}
+
+{% block body_block %}
+    <h1>Club News</h1>
+
     <div>
-    {% if news_cat %}
-        <h1>{{ news_cat.name }}</h1>
-        {% if reports %}
-            <ul>
-            {% for report in reports %}
-                <h4>{{ report.title }}</h4>
-                <li>{{ report.text }}</li>
-            {% endfor %}
-            </ul>
+        {% if news_cats %}
+        <ul>
+          {% for cat in news_cats %}
+          <li>
+              {{ cat.name }}
+          </li>
+          {% endfor %}
+        </ul>
         {% else %}
-            <strong>No reports currently in news.</strong>
+        <h5>No match Reports available</h5>
         {% endif %}
-    {% else %}
-        The specified news category does not exist!
-    {% endif %}
-    </div>
-</body>
-</html>
+      </div>
+      
+        <div>
+          <h3>
+            Match Reports
+          </h3>
+          {% if news_reports %}
+            <ul>
+              {% for report in news_reports %}
+              <li>
+                <h5>{{ report.title}}</h5>
+                <p>{{ report.text }}</p>
+              </li>
+              {% endfor %}
+            </ul>
+            {% else %}
+              <h5>No news available</h5>
+            {% endif %}
+        </div>
+      
+
+{% endblock %}

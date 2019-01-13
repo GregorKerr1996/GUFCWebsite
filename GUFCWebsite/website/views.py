@@ -6,7 +6,7 @@ def index(request):
 
     news_cat_list = News.objects.order_by("-views")[:5]
     reports = Report.objects.order_by("-views")[:5]
-    context_dict = {'boldmessage': "Ballin never stops", "news_cats": news_cat_list, "news_reports": reports}
+    context_dict = {"news_cats": news_cat_list, "news_reports": reports}
 
     return render(request, 'website/index.html', context_dict)
 
@@ -69,6 +69,9 @@ def underTwentyOnes(request):
     return render(request, 'website/underTwentyOnes.html', context=context_dict)
 
 def matchReports(request):
-    context_dict = {}
+    
+    news_cat_list = News.objects.order_by("-views")[:5]
+    reports = Report.objects.filter(news_cat__name = "match_reports")
+    context_dict = {"news_cats": news_cat_list, "news_reports": reports}
 
-    return render(request, 'website/matchReports.html', context=context_dict)
+    return render(request, 'website/matchReports.html', context_dict)
