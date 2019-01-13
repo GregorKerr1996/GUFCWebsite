@@ -80,30 +80,84 @@
     </div>
 </div>
 <br>
+<br>
 
+<br>
 <div class="container marketing">
     <div class="row">
-        <div class="col-lg-4">
-            <a href="/website/teamProfiles"><img class="rounded-circle" src="{% static 'images/committee.jpg' %}" width="140"
-                                         height="140">
-                <h2>Our Teams</h2>
+        <div class="col-lg-3">
+            <a href="/website/teamProfiles"><img class="rounded-circle"
+                                                 src="{% static 'images/club_logo.jpg' %}"
+                                                 width="140"
+                                                 height="140">
+                <h2>Our Club</h2>
             </a>
         </div>
-        <div class="col-lg-4">
-            <a href="/website/matchReports"><img class="rounded-circle" src="{% static 'images/committee.jpg' %}" width="140"
-                                         height="140">
+        <div class="col-lg-3">
+            <a href="/website/matchReports"><img class="rounded-circle"
+                                                 src="{% static 'images/match_report.png' %}"
+                                                 width="140"
+                                                 height="140">
                 <h2>Match Reports</h2>
             </a>
         </div>
-        <div class="col-lg-4">
-            <a href="/website/teamProfiles"><img class="rounded-circle" src="{% static 'images/committee.jpg' %}" width="140"
-                                         height="140">
-                <h2>Other </h2>
+        <div class="col-lg-3">
+            <a href="/website/teamProfiles"><img class="rounded-circle"
+                                                 src="{% static 'images/placeholder.jpg' %}"
+                                                 width="140"
+                                                 height="140">
+                <h2>Squads </h2>
+            </a>
+        </div>
+
+        <div class="col-lg-3">
+            <a href="/website/teamProfiles"><img class="rounded-circle"
+                                                 src="{% static 'images/diddies_tournament.jpg' %}"
+                                                 width="140"
+                                                 height="140">
+                <h2>Events </h2>
             </a>
         </div>
     </div>
 </div>
+<br>
 
+<br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4">
+            <a class="twitter-timeline"
+               href="https://twitter.com/GlasgowUniFC"
+               data-tweet-limit="2">
+                Tweets by @GlasgowUniFC</a>
+            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+
+
+        <div class="col-lg-4">
+            <!-- SnapWidget -->
+            <script src="https://snapwidget.com/js/snapwidget.js"></script>
+            <iframe src="https://snapwidget.com/embed/645920" class="snapwidget-widget" allowtransparency="true"
+                    frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; "></iframe>
+            <!--<div class="iframely-embed">-->
+            <!--<div class="iframely-responsive" style="height: 168px; padding-bottom: 0;"><a-->
+            <!--href="https://www.instagram.com/instagufc/" data-iframely-url="//cdn.iframe.ly/ZYeTrHY"></a>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--<script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>-->
+        </div>
+
+        <div class="col-lg-4">
+            <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fglasgowuniversitymensfootballclub%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                    width="340" height="500" style="border:none;overflow:hidden" scrolling="no"
+                    frameborder="0"
+                    allowTransparency="true" allow="encrypted-media"></iframe>
+
+        </div>
+    </div>
+
+</div>
 
 
 {% endblock %}
