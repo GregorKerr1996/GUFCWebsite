@@ -70,8 +70,8 @@ def underTwentyOnes(request):
 
 def matchReports(request):
     
-    news_cat_list = News.objects.order_by("-views")[:5]
-    reports = Report.objects.filter(news_cat__name = "match_reports")
-    context_dict = {"news_cats": news_cat_list, "news_reports": reports}
+    news_list = Report.objects.filter(news_cat__name = "club_news")
+    match_reports = Report.objects.filter(news_cat__name = "match_reports")
+    context_dict = {"news": news_list, "match_reports": match_reports}
 
     return render(request, 'website/matchReports.html', context_dict)

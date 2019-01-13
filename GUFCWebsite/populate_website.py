@@ -27,7 +27,7 @@ def populate():
     
     club_news = [
         {"title": "GUFC win UEFA Gold Award",
-        "text":"Title says it all really, Glasgow Uni FC representatives were presnet at the cerony in Bern to receive the award"},
+        "text":"Title says it all really, Glasgow Uni FC representatives were present at the ceremony in Bern to receive the award"},
         {"title": "Quiz Night!",
         "text":"GUFC happy to announce that we will be hosting our first ever GUFC Past and Present Pub Quiz in Dram"},
         {"title":"Transfer News",

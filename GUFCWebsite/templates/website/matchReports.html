@@ -10,36 +10,38 @@
     <h1>Club News</h1>
 
     <div>
-        {% if news_cats %}
+        {% if news %}
         <ul>
-          {% for cat in news_cats %}
+          {% for report in news %}
           <li>
-              {{ cat.name }}
+              <h4>{{ report.title }}</h4>
+              
+              {{ report.text }}
           </li>
           {% endfor %}
         </ul>
         {% else %}
-        <h5>No match Reports available</h5>
+        <h5>No club news available</h5>
         {% endif %}
-      </div>
+    </div>
       
-        <div>
-          <h3>
-            Match Reports
-          </h3>
-          {% if news_reports %}
-            <ul>
-              {% for report in news_reports %}
-              <li>
-                <h5>{{ report.title}}</h5>
-                <p>{{ report.text }}</p>
-              </li>
-              {% endfor %}
-            </ul>
-            {% else %}
-              <h5>No news available</h5>
-            {% endif %}
-        </div>
+    <div>
+        <h3>
+        Match Reports
+        </h3>
+        {% if match_reports %}
+        <ul>
+            {% for report in match_reports %}
+            <li>
+            <h5>{{ report.title}}</h5>
+            <p>{{ report.text }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+            <h5>No match reports available</h5>
+        {% endif %}
+    </div>
       
 
 {% endblock %}
