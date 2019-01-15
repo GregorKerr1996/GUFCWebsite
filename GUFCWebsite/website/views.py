@@ -5,9 +5,8 @@ from website.forms import ReportForm
 
 def index(request):
 
-    news_cat_list = News.objects.order_by("-views")[:5]
     reports = Report.objects.order_by("-views")[:5]
-    context_dict = {"news_cats": news_cat_list, "news_reports": reports}
+    context_dict = {"news_reports": reports}
 
     return render(request, 'website/index.html', context_dict)
 
@@ -73,6 +72,13 @@ def underTwentyOnes(request):
     context_dict = {}
 
     return render(request, 'website/underTwentyOnes.html', context=context_dict)
+
+def club_news(request):
+    
+    news_list = Report.objects.filter(news_cat__name = "club_news")
+    context_dict = {"news": news_list,}
+
+    return render(request, 'website/club_news.html', context_dict)
 
 def matchReports(request):
     

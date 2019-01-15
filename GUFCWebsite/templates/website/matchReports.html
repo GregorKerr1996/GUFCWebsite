@@ -7,28 +7,11 @@
 {% endblock %}
 
 {% block body_block %}
-    <h1>Club News</h1>
-
+          
     <div>
-        {% if news %}
-        <ul>
-          {% for report in news %}
-          <li>
-              <h4>{{ report.title }}</h4>
-              
-              {{ report.text }}
-          </li>
-          {% endfor %}
-        </ul>
-        {% else %}
-        <h5>No club news available</h5>
-        {% endif %}
-    </div>
-      
-    <div>
-        <h3>
+        <h1>
         Match Reports
-        </h3>
+        </h1>
         {% if match_reports %}
         <ul>
             {% for report in match_reports %}

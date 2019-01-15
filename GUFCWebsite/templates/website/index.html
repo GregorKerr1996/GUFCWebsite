@@ -26,7 +26,7 @@
                     <img class="d-block w-100" src="{% static 'images/committee.jpg' %}" alt="Third slide">
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#carouselExampleControl" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
@@ -58,6 +58,23 @@
 </div>
 <br>
 <br>
+
+<h2>
+    Latest News
+</h2>
+<div class="row">
+    
+    {% if news_reports %}
+        {% for report in news_reports %}
+            <div class = "col-lg-4">
+                <h4>{{ report.title}}</h4>
+                <p>{{ report.text }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <h5>No match reports available</h5>
+    {% endif %}
+</div>
 
 <br>
 <div class="container marketing">
