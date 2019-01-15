@@ -12,5 +12,5 @@ urlpatterns = [
     url(r'^underTwentyOnes/', views.underTwentyOnes, name='underTwentyOnes'),
     url(r'^matchReports/', views.matchReports, name='matchReports'),
     url(r'^add_news/$', views.add_report, name='add_report'),
-    url(r'^events/$', views.add_report, name='events'),
+    url(r'^events/$', views.events, name='events'),
 ]
