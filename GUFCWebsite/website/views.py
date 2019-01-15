@@ -64,6 +64,11 @@ def thirdTeam(request):
 
     return render(request, 'website/thirdTeam.html', context=context_dict)
 
+def events(request):
+    context_dict = {}
+
+    return render(request, 'website/events.html', context=context_dict)
+
 def underTwentyOnes(request):
     context_dict = {}
 

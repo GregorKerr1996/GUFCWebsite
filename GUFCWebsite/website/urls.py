@@ -3,7 +3,7 @@ from website import views
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
-    url(r'^club/', views.club, name = 'club'),
+    url(r'^club/', views.club, name='club'),
     url(r'^news/(?P<news_name_slug>[\w\-]+)/$', views.show_news, name='show_news'),
     url(r'^teamProfiles/', views.teamProfiles, name='teamProfiles'),
     url(r'^firstTeam/', views.firstTeam, name='firstTeam'),
@@ -11,5 +11,6 @@ urlpatterns = [
     url(r'^thirdTeam/', views.thirdTeam, name='thirdTeam'),
     url(r'^underTwentyOnes/', views.underTwentyOnes, name='underTwentyOnes'),
     url(r'^matchReports/', views.matchReports, name='matchReports'),
-    url(r'^add_news/$', views.add_report, name = 'add_report'),
+    url(r'^add_news/$', views.add_report, name='add_report'),
+    url(r'^events/$', views.add_report, name='events'),
 ]
