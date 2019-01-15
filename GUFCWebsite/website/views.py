@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from website.models import News, Report
+from website.forms import ReportForm
 
 def index(request):
 
@@ -75,3 +76,19 @@ def matchReports(request):
     context_dict = {"news": news_list, "match_reports": match_reports}
 
     return render(request, 'website/matchReports.html', context_dict)
+
+def add_report(request):
+
+    form = ReportForm()
+    if request.method =="POST":
+        form = ReportForm(request.POST)
+
+        if form.is_valid():
+            form.save(commit = True)
+            return index(request)
+        else:
+            print(form.errors)
+    
+    context_dict = {"form": form}
+
+    return render(request, "website/add_news.html", context_dict)
