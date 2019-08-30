@@ -1,123 +1,85 @@
 <!DOCTYPE html>
 {% extends 'website/base.html' %}
 {% load staticfiles %}
-
 {% block title_block %}
-
 {% endblock %}
-
 {% block body_block %}
-<script>
-    $(document).ready(function () {
-        $('.carousel').carousel({
-            interval: 5000
-        });
-    }); s
-</script>
-<style>
-    body,
-    html {
-        height: 100%;
-        margin: 0;
-    }
-
-    .bg {
-        /* The image used */
-        background-image: url("{% static 'images/committee.jpg' %}");
-
-        /* Full height */
-        height: 50%;
-
-        /* Center and scale the image nicely */
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-</style>
 <!-- Full Page Image Header with Vertically Centered Content -->
 <header class="masthead">
-
-    <div class="row align-items-center">
-        <div class="col-12 text-center">
-            <img src="{% static 'images/Untitled design-4.jpeg' %}">
-        </div>
-
+    <img src="{% static 'images/Untitled design-4.jpeg' %}" width="100%">
     </div>
 </header>
-<section>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500"
+                src="{% static 'images/placeholder.jpg' %}" data-holder-rendered="true" class="responsive">
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-5">
+            <br>
+            <br>
+            <br>
+            <h2 class="featurette-heading"> Our Club History <span class="text-muted">One Club One Family </span>
+            </h2>
+            <p class="lead">
+                Glasgow University Football Club are a Scottish amateur football team based at the Garscube
+                Sports Complex in Glasgow,that represents the University of Glasgow. They currently play in the
+                Caledonian Amateur Football League.
+            </p>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-md-5">
-                <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500"
-                    src="{% static 'images/placeholder.jpg' %}" data-holder-rendered="true" class="responsive">
-            </div>
-            <div class="col-md-1"></div>
-            <div class="col-md-5">
-                <br>
-                <br>
-                <br>
-                <h2 class="featurette-heading"> Our Club History <span class="text-muted">One Club One Family </span>
-                </h2>
-                <p class="lead">
-                    Glasgow University Football Club are a Scottish amateur football team based at the Garscube
-                    Sports Complex in Glasgow,that represents the University of Glasgow. They currently play in the
-                    Caledonian Amateur Football League.
-                </p>
-
-            </div>
         </div>
     </div>
-</section>
+</div>
 
-<section>
-    <div class="container marketing">
-        <div class="row">
-            <div class="col-lg-2">
-                <a href="/website/club"><img class="rounded-circle" src="{% static 'images/club_logo.jpg' %}"
-                        width="140" height="140" class="responsive">
-                    <h2>Our Club</h2>
-                </a>
-            </div>
-
-            <div class="col-lg-1">
-            </div>
-
-
-            <div class="col-lg-2">
-                <a href="/website/matchReports"><img class="rounded-circle" src="{% static 'images/match_report.png' %}"
-                        width="140" height="140" class="responsive">
-                    <h2>News</h2>
-                </a>
-            </div>
-
-            <div class="col-lg-1">
-            </div>
-
-
-            <div class="col-lg-2">
-                <a href="/website/teamProfiles"><img class="rounded-circle" src="{% static 'images/placeholder.jpg' %}"
-                        width="140" height="140" class="responsive">
-                    <h2>Squads </h2>
-                </a>
-            </div>
-
-            <div class="col-lg-1">
-            </div>
-
-            <div class="col-lg-2">
-                <a href="/website/events"><img class="rounded-circle" src="{% static 'images/diddies_tournament.jpg' %}"
-                        width="140" height="140" class="responsive">
-                    <h2>Events </h2>
-                </a>
-            </div>
-
-            <div class="col-lg-1">
-            </div>
+<div class="container marketing">
+    <div class="row">
+        <div class="col-lg-2">
+            <a href="/website/club"><img class="rounded-circle" src="{% static 'images/club_logo.jpg' %}" width="140"
+                    height="140" class="responsive">
+                <h2>Our Club</h2>
+            </a>
         </div>
 
+        <div class="col-lg-1">
+        </div>
+
+
+        <div class="col-lg-2">
+            <a href="/website/matchReports"><img class="rounded-circle" src="{% static 'images/match_report.png' %}"
+                    width="140" height="140" class="responsive">
+                <h2>News</h2>
+            </a>
+        </div>
+
+        <div class="col-lg-1">
+        </div>
+
+
+        <div class="col-lg-2">
+            <a href="/website/teamProfiles"><img class="rounded-circle" src="{% static 'images/placeholder.jpg' %}"
+                    width="140" height="140" class="responsive">
+                <h2>Squads </h2>
+            </a>
+        </div>
+
+        <div class="col-lg-1">
+        </div>
+
+        <div class="col-lg-2">
+            <a href="/website/events"><img class="rounded-circle" src="{% static 'images/diddies_tournament.jpg' %}"
+                    width="140" height="140" class="responsive">
+                <h2>Events </h2>
+            </a>
+        </div>
+
+        <div class="col-lg-1">
+        </div>
     </div>
-</section>
+
+</div>
+
 
 <div class="container">
     <div class="row">
