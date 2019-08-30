@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+{% extends 'website/base.html' %}
+{% load staticfiles %}
+{% block title_block %}
+
+{% endblock %}
+
+{% block body_block %}
+          
+    <div>
+        <h1>
+        Match Reports
+        </h1>
+        {% if match_reports %}
+        <ul>
+            {% for report in match_reports %}
+            <li>
+                <h4>{{ report.title}} <small>{{ report.date }}</small></h4>
+                <p>{{ report.text }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+            <h5>No match reports available</h5>
+        {% endif %}
+    </div>
+      
+
+{% endblock %}

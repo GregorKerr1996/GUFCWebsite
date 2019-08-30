@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+{% extends 'website/base.html' %}
+
+{% load staticfiles %}
+{% block title_block %}
+
+{% endblock %}
+
+{% block body_block %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card" style="width:400px">
+                <img class="card-img-top" src="{% static 'images/placeholder.jpg' %}" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">First Team</h4>
+                    <p class="card-text">2018/2019</p>
+                    <a href="/website/firstTeam" class="btn btn-primary">See Profile</a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-4">
+            <div class="card" style="width:400px">
+                <img class="card-img-top" src="{% static 'images/placeholder.jpg' %}" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">Second Team</h4>
+                    <p class="card-text">2018/2019</p>
+                    <a href="/website/secondTeam" class="btn btn-primary">See Profile</a>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card" style="width:400px">
+                <img class="card-img-top" src="{% static 'images/placeholder.jpg' %}" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">Third Team</h4>
+                    <p class="card-text">2018/2019</p>
+                    <a href="/website/thirdTeam" class="btn btn-primary">See Profile</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-4">
+            <div class="card" style="width:400px">
+                <img class="card-img-top" src="{% static 'images/placeholder.jpg' %}" alt="Card image">
+                <div class="card-body">
+                    <h4 class="card-title">Under 21's</h4>
+                    <p class="card-text">2018/2019</p>
+                    <a href="/website/underTwentyOnes" class="btn btn-primary">See Profile</a>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+</div>
+
+
+{% endblock %}

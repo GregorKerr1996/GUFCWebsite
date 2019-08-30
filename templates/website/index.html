@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+{% extends 'website/base.html' %}
+{% load staticfiles %}
+
+{% block title_block %}
+
+{% endblock %}
+
+{% block body_block %}
+<script>
+    $(document).ready(function () {
+        $('.carousel').carousel({
+            interval: 5000
+        });
+    }); s
+</script>
+<style>
+    body,
+    html {
+        height: 100%;
+        margin: 0;
+    }
+
+    .bg {
+        /* The image used */
+        background-image: url("{% static 'images/committee.jpg' %}");
+
+        /* Full height */
+        height: 50%;
+
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+<!-- Full Page Image Header with Vertically Centered Content -->
+<header class="masthead">
+
+    <div class="row align-items-center">
+        <div class="col-12 text-center">
+            <img src="{% static 'images/Untitled design-4.jpeg' %}">
+        </div>
+
+    </div>
+</header>
+<section>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500"
+                    src="{% static 'images/placeholder.jpg' %}" data-holder-rendered="true" class="responsive">
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-5">
+                <br>
+                <br>
+                <br>
+                <h2 class="featurette-heading"> Our Club History <span class="text-muted">One Club One Family </span>
+                </h2>
+                <p class="lead">
+                    Glasgow University Football Club are a Scottish amateur football team based at the Garscube
+                    Sports Complex in Glasgow,that represents the University of Glasgow. They currently play in the
+                    Caledonian Amateur Football League.
+                </p>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container marketing">
+        <div class="row">
+            <div class="col-lg-2">
+                <a href="/website/club"><img class="rounded-circle" src="{% static 'images/club_logo.jpg' %}"
+                        width="140" height="140" class="responsive">
+                    <h2>Our Club</h2>
+                </a>
+            </div>
+
+            <div class="col-lg-1">
+            </div>
+
+
+            <div class="col-lg-2">
+                <a href="/website/matchReports"><img class="rounded-circle" src="{% static 'images/match_report.png' %}"
+                        width="140" height="140" class="responsive">
+                    <h2>News</h2>
+                </a>
+            </div>
+
+            <div class="col-lg-1">
+            </div>
+
+
+            <div class="col-lg-2">
+                <a href="/website/teamProfiles"><img class="rounded-circle" src="{% static 'images/placeholder.jpg' %}"
+                        width="140" height="140" class="responsive">
+                    <h2>Squads </h2>
+                </a>
+            </div>
+
+            <div class="col-lg-1">
+            </div>
+
+            <div class="col-lg-2">
+                <a href="/website/events"><img class="rounded-circle" src="{% static 'images/diddies_tournament.jpg' %}"
+                        width="140" height="140" class="responsive">
+                    <h2>Events </h2>
+                </a>
+            </div>
+
+            <div class="col-lg-1">
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3">
+            <a class="twitter-timeline" href="https://twitter.com/GlasgowUniFC" data-tweet-limit="2">
+                Tweets by @GlasgowUniFC</a>
+            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+
+        <div class="col-lg-1">
+        </div>
+
+
+        <div class="col-lg-3">
+            <!-- SnapWidget -->
+            <script src="https://snapwidget.com/js/snapwidget.js"></script>
+            <iframe src="https://snapwidget.com/embed/645920" class="snapwidget-widget" allowtransparency="true"
+                frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; "></iframe>
+            <!--<div class="iframely-embed">-->
+            <!--<div class="iframely-responsive" style="height: 168px; padding-bottom: 0;"><a-->
+            <!--href="https://www.instagram.com/instagufc/" data-iframely-url="//cdn.iframe.ly/ZYeTrHY"></a>-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--<script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>-->
+        </div>
+
+
+        <div class="col-lg-3">
+            <iframe
+                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fglasgowuniversitymensfootballclub%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0"
+                allowTransparency="true" allow="encrypted-media"></iframe>
+
+        </div>
+    </div>
+
+</div>
+</section>
+{% endblock %}
+
+</html>

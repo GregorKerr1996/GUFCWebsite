@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+{% extends 'website/base.html' %}
+{% load staticfiles %}
+{% block title_block %}
+
+{% endblock %}
+
+{% block body_block %}
+    <h1>Club Events</h1>
+
+    <div>
+        {% if events %}
+        <ul>
+          {% for report in events %}
+          <li>
+              <h4>{{ report.title }} <small>{{ report.date }}</small></h4>
+              <p>{{ report.text }}</p>
+          </li>
+          {% endfor %}
+        </ul>
+        {% else %}
+        <h5>No club events available</h5>
+        {% endif %}
+    </div>
+    
+{% endblock %}
