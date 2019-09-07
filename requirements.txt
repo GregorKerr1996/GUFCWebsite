@@ -6,3 +6,4 @@ numpy==1.16.5
 Pillow==6.1.0
 psycopg2==2.7.4
 pytz==2019.2
+whitenoise==3.3.1
